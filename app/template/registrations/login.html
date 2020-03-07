@@ -1,0 +1,10 @@
+{% extends 'index.html'%}
+
+{% block content %}
+     <h1>Login</h1>
+     <form method="POST">
+            {% crsf_token %}
+            {{form.as_p}}
+            <button>Sign In</button>
+        </form>
+    {% end block %}
